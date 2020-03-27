@@ -4,7 +4,10 @@ def reverse_each_word(string)
   string_array = string.split(" ")
   
   string_array = string_array.each do |word| 
-    word = word.reverse
+    if !new_string then
+      new_string = word.reverse else
+      new_string += word.reverse
+    end
   end
 
   new_string
