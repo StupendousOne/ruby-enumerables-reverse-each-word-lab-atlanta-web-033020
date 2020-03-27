@@ -3,10 +3,14 @@ def reverse_each_word(string)
   
   string_array = string.split(" ")
   
-  string_array = string_array.each do |word| 
-    if !new_string then
-      new_string = word.reverse else
-      new_string += word.reverse
+  string_array = string_array.collect do |word| 
+    if !new_string 
+      then
+        new_string = "#{word.reverse} "
+      else if 
+        new_string += "#{word.reverse} "
+      else
+        new_string += word.reverse
     end
   end
 
