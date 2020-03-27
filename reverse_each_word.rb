@@ -4,15 +4,8 @@ def reverse_each_word(string)
   string_array = string.split(" ")
   
   string_array = string_array.collect do |word| 
-    if !new_string 
-      then
-        new_string = "#{word.reverse} "
-      else if 
-        new_string += "#{word.reverse} "
-      else
-        new_string += word.reverse
-    end
+    word.reverse
   end
-
+  new_string = string_array.split(" ")
   new_string
 end
